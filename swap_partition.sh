@@ -20,3 +20,4 @@ echo "Writing grub..."
 
 sudo update-grub
 
+reboot
