@@ -16,6 +16,9 @@ echo "Modifying grub config..."
 
 sed -i "s/GRUB_DEFAULT=.*/GRUB_DEFAULT=$partition_number/" /etc/default/grub
 
+
+# Because I am currently running two phisical hard drives, I need to write grub to the mbr on this device, 
+# otherwise changes will not take effect
 echo "Writing grub to device ..."
 
 sudo grub-install /dev/sdb
