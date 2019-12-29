@@ -1,0 +1,24 @@
+{
+  "name": "update_manager_nodejs",
+  "version": "1.0.0",
+  "description": "OTA Software Update Manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/babel  ./src --experimental --source-maps-inline -d ./dist",
+    "start": "node dist/index.js",
+    "rebuild": "npm run build && npm run start"
+  },
+  "author": "Catalin Avram",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "type": "module",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
